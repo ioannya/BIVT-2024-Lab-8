@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +33,7 @@ namespace Lab_8
             string[] text = normal.Split(sep, StringSplitOptions.RemoveEmptyEntries);
             
             string[] selected = new string[0];
+            
             foreach (var word in text)
             {
                 bool onlyLetters = true;
