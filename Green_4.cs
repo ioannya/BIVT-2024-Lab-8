@@ -26,24 +26,25 @@ namespace Lab_8
                 return;
             }
             string[] surnames = Input.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] surnamesNorm = new string[surnames.Length];
 
             for (int i = 0; i < surnames.Length; i++)
             {
-                surnames[i] = surnames[i].Trim();
+                surnamesNorm[i] = surnames[i].Trim();
             }
 
-            for (int i = 1; i < surnames.Length; i++)
+            for (int i = 1; i < surnamesNorm.Length; i++)
             {
-                string key = surnames[i];
+                string key = surnamesNorm[i];
                 int j = i - 1;
-                while (j >= 0 && CompareStrings(surnames[j], key) > 0)
+                while (j >= 0 && CompareStrings(surnamesNorm[j], key) > 0)
                 {
-                    surnames[j + 1] = surnames[j];
+                    surnamesNorm[j + 1] = surnamesNorm[j];
                     j--;
                 }
-                surnames[j + 1] = key;
+                surnamesNorm[j + 1] = key;
             }
-            _output = surnames;
+            _output = surnamesNorm;
         }
         private int CompareStrings(string a, string b)
         {
