@@ -10,7 +10,8 @@ namespace Lab_8
     public class Green_2 : Green
     {
         private char[] _output;
-        public char[] Output => _output;
+        public char[] Output => _output?.ToArray();
+
         public Green_2(string input) : base(input)
         {
             _output = null;
