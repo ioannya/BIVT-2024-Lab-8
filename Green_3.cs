@@ -12,7 +12,7 @@ namespace Lab_8
         private string[] _output;
         
         private string _sequence;
-        public string[] Output => _output;
+        public string[] Output => _output?.ToArray();
 
         public Green_3(string input, string sequence) : base(input)
         {
