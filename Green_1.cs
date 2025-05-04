@@ -10,7 +10,7 @@ namespace Lab_8
     public class Green_1 : Green
     {
         private (char, double)[] _output;
-        public (char, double)[] Output => _output;
+        public (char, double)[] Output => _output?.ToArray();
         public Green_1(string input) : base(input)
         {
             _output = null;
